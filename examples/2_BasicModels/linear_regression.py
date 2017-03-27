@@ -3,6 +3,7 @@ A linear regression learning algorithm example using TensorFlow library.
 
 Author: Aymeric Damien
 Project: https://github.com/aymericdamien/TensorFlow-Examples/
+Edit a little by Yandan Yang
 '''
 
 from __future__ import print_function
@@ -41,7 +42,7 @@ cost = tf.reduce_sum(tf.pow(pred-Y, 2))/(2*n_samples)
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 
 # Initializing the variables
-init = tf.global_variables_initializer()
+nit = tf.initialize_all_variables()   #used to be "tf.global_variables_initializer"
 
 # Launch the graph
 with tf.Session() as sess:
